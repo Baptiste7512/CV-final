@@ -2,6 +2,6 @@ import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
   connect() {
-    console.log("hello from typed_controller!")
+    console.log("hello from typed _controller!")
   }
 }
