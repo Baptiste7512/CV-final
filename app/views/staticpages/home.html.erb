@@ -1,0 +1,407 @@
+<link rel="stylesheet" href="../../../assets/stylesheets/staticpages.scss">
+<header>
+      <nav class="navbar navbar-expand-sm navbar-light fixed-top" id="navbar" data-controller='navbar' data-action='scroll@window->navbar#updateNavbar'>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Baptiste</a>
+            </li>
+            <li class="nav-item">
+              <a href="#language" class="nav-link">Language et formation</a>
+            </li>
+            <li class="nav-item">
+              <a href="#portfolio" class="nav-link">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div>
+        <h1>Baptiste Vigneron</h1>
+        <div id="line"></div>
+        <h2>Developpeur Full-stack</h2>
+
+        <div class="container">
+
+          <div class="row presentation">
+            <div class="col-6 col-md-3 infos">
+              <h5><i class="fa fa-user"> 28 ans</i></h5>
+              <h5><i class="fa fa-compass"> Paris</i></h5>
+              <h5><i class="fa fa-phone"> 07.66.64.43.46</i></h5>
+            </div>
+
+            <div class="d-none d-md-block col-md-6">
+              <span data-controller="typed-js"></span>
+            </div>
+
+            <div class="col-6 col-md-3 photo">
+              <%= image_tag 'Portrait.jpg' %>
+            </div>
+          </div>
+        </div>
+
+        <div class="button">
+          <%= link_to "Télécharger mon cv", download_pdf_path %>
+        </div>
+
+      </div>
+    </header>
+
+    <section id="language">
+      <h3>Language</h3>
+      <div>
+        <div class="barre">
+          <%= image_tag 'html.png', style:"width: 30px;"%>
+          HTML
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated"
+            role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+            style="width: 80%;background-color: #F86B3A;">80%</div>
+          </div>
+        </div>
+        <div class="barre">
+          <%= image_tag 'css.png', style: "width: 30px;" %>
+          CSS
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated"
+            role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+            style="width: 80%; background-color: #563D7C;">80%</div>
+          </div>
+        </div>
+        <div class="barre">
+          <%= image_tag 'bootstrap.png', style: "width: 30px;" %>
+         Bootstrap
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated"
+            role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+            style="width: 80%; background-color: rgb(151, 96, 151);">80%</div>
+          </div>
+        </div>
+        <div class="barre">
+          <%= image_tag 'pngegg.png', style: 'width: 30px;' %>
+          Ruby on Rails
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger"
+            role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+            style="width: 70%;">70%</div>
+          </div>
+        </div>
+        <div class="barre">
+          <%= image_tag 'js.png', style: 'width: 30px;' %>
+          JavaScript
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated"
+            role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+            style="width: 50%; background-color: #FFDE41;">50%</div>
+          </div>
+        </div>
+        <div class="barre">
+          <%= image_tag 'react.png', style: 'width 30px' %>
+         React
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated"
+            role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+            style="width: 40%; background-color: rgb(111, 222, 241));">40%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="formation" data-controller='compteur' data-action='scroll@window->compteur#compteurScroll:once'>
+      <h3>Formation</h3>
+      <div>
+        <div id="autodidacte">
+          <h4><i class="fa fa-university">Apprentissage autodidacte</i></h4>
+          <div class="counter">
+            <div class="data">
+              <div class="counter-value" data-count="13">0</div>
+              <span>Mois de code</span>
+            </div>
+          </div>
+        </div>
+        <div id="wagon">
+          <h4><i class="fa fa-university">bootcamp Wagon</i></h4>
+          <div class="counter">
+            <div class="data">
+              <div class="counter-value" data-count="9">0</div>
+              <span>Semaine de code</span>
+            </div>
+            <div class="data">
+              <div class="counter-value" data-count="3">0</div>
+              <span>Projets réalisés</span>
+            </div>
+          </div>
+        </div>
+        <div id="quanrante">
+          <h4><i class="fa fa-university">Piscine 42</i></h4>
+          <div class="counter">
+            <div class="data">
+              <div class="counter-value" data-count="300">0</div>
+              <span>Heures de code</span>
+            </div>
+            <div class="data">
+              <div class="counter-value" data-count="2">0</div>
+              <span>Projets réalisés</span>
+            </div>
+          </div>
+        </div>
+        <div id="openclassroom">
+          <h4><i class="fa fa-university">Openclassroom</i></h4>
+          <div class="counter">
+            <div class="data">
+              <div class="counter-value" data-count="6">0</div>
+              <span>Cours terminer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <h3>Portfolio</h3>
+      <!-- Premier projet -->
+      <div class="projet">
+
+        <div class="cadre">
+          <div class="img-container">
+
+              <%= image_tag 'whispers.jpg' %>
+
+          </div>
+        </div>
+
+        <div class="legende">
+          <h4>
+            <%= image_tag 'pngegg.png', style: 'width: 30px;' %>
+            <%= image_tag 'js.png', style: 'width: 3Opx' %>
+            <%= image_tag 'bootstrap.png', style: 'width: 30px' %>
+            Whispers - Site de rencontre basé sur la voix
+          </h4>
+          <p>
+          Whispers est un site de rencontre basé sur la voix.
+          </p>
+          <a href="https://github.com/clementgateaud/whispers" target="_blank">
+            <h5>
+              <i class="fab fa-github">Code source du projet Whispers</i>
+            </h5>
+          </a>
+          <a href="https://whispers-app.herokuapp.com/users/sign_in" target="_blank">
+            <h5>
+              Lien vers le site
+            </h5>
+          </a>
+        </div>
+      </div>
+
+      <!-- Second projet -->
+      <div class="projet">
+        <div class="cadre">
+          <div class="img-container">
+              <%= image_tag 'roflex.png' %>
+          </div>
+        </div>
+
+        <div class="legende">
+          <h4>
+            <%= image_tag 'pngegg.png', style: 'width: 30px;' %>
+            <%= image_tag 'js.png', style: 'width: 30px' %>
+            <%= image_tag 'bootstrap.png', style: 'width: 30px' %>
+            Roflex - Site de location de montre entre particulier
+          </h4>
+          <p>
+            Roflex est un site de location de montre, afin de ne jamais avoir le poignet vide.
+          </p>
+          <a href="https://github.com/clementgateaud/roflex" target="_blank">
+            <h5>
+              <i class="fab fa-github">Code source du projet Roflex</i>
+            </h5>
+          </a>
+          <a href="https://roflex.herokuapp.com/" target="_blank">
+            <h5>Lien vers le site</h5>
+          </a>
+        </div>
+      </div>
+      <div class="projet">
+        <div class="cadre">
+          <div class="img-container">
+            <a href="https://whispers-app.herokuapp.com/users/sign_in" target="_blank">
+              <%= image_tag 'skatemap.png', style: "width: 100%; height: 100%; object-fit: cover;" %>
+            </a>
+          </div>
+        </div>
+
+        <div class="legende">
+          <h4>
+            <%= image_tag 'pngegg.png', style: 'width: 30px' %>
+            <%= image_tag 'js.png', style: "width: 30px;" %>
+            <%= image_tag 'bootstrap.png', style: "width: 30px;" %>
+            Skatemap- Reseau social autour de pratique Urbaine
+          </h4>
+          <p>
+           Skatemap permet de découvrir des spot de skate, mais aussi de communiquez avec les personnes qui pratique le skate dans ses zones.
+          </p>
+          <a href="https://github.com/Baptiste7512/skatemap" target="_blank">
+            <h5>
+              <i class="fab fa-github">Code source du projet Skatemap</i>
+            </h5>
+          </a>
+          <a href="https://skatemaper.herokuapp.com/" target="_blank">
+            <h5>Lien vers le site</h5>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="other-skills">
+      <h3>Soft skills</h3>
+      <div class="cloud">
+        <div class="aos-item"
+          data-aos="fade-zoom-in"
+          data-aos-delay="500"
+          data-aos-duration="1800">
+            <span style="color: red; margin-left: -90%;">
+              github
+            </span>
+        </div>
+        <div class="aos-item"
+          data-aos="fade-zoom-in"
+          data-aos-delay="500"
+          data-aos-duration="2500">
+            <span style="color: rgb(110, 110, 240); margin-left: 50%;">
+              Motivation
+            </span>
+        </div>
+        <div class="aos-item"
+          data-aos="fade-zoom-in"
+          data-aos-delay="500"
+          data-aos-duration="4500">
+            <span style="color: rgb(199, 199, 48); margin-left: -20%;">
+               Methode agile
+            </span>
+        </div>
+        <div class="aos-item"
+          data-aos="fade-zoom-in"
+          data-aos-delay="500"
+          data-aos-duration="5000">
+            <span style="color: rgb(114, 59, 114); margin-left: 40%;">
+              Figma
+            </span>
+        </div>
+      </div>
+    </section>
+
+    <section id="hobbies">
+      <h3 style="color: rgb(111, 111, 243);">Hobbies</h3>
+      <div class="pictures">
+
+        <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front">
+              <%= image_tag 'skate.jpg', style: "width:100%; height: 100%;" %>
+            </div>
+            <div class="flip-box-back" style="background-color: tomato;">
+              <div>
+                <p>Skateboard</p>
+                <p>Musculation</p>
+                <p>Running</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front">
+              <%= image_tag 'musique.jpg', style: "width:100%; height: 100%;" %>
+            </div>
+            <div class="flip-box-back" style="background-color: rgb(230, 230, 114);">
+              <div>
+                <p>Saxophone</p>
+                <p>Concert</p>
+                <p>Blog musical</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front">
+              <%= image_tag 'plante.jpg', style: "width:100%; height: 100%;" %>
+            </div>
+            <div class="flip-box-back" style="background-color: green;">
+              <div>
+                <p>Jardinage</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <h3>Retrouvez moi</h3>
+      <div class="footer-icons">
+        <div>
+          <a href="https://twitter.com/baptistedevjr" class="network">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+        <div>
+          <a href="https://www.linkedin.com/in/baptiste-vigneron/" class="network">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+        <div>
+          <a href="https://github.com/Baptiste7512" class="network">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+      <div class="arrow">
+        <a href="#">
+        <i class="fas fa-sort-up"></i>
+        </a>
+      </div>
+    <%# <div class="form-container">
+      <form id="reused_form">
+        <div>
+          <input id="name" type="text" name="name" placeholder="Nom" required class="validate">
+        </div>
+        <div>
+          <input id="email" type="email" name="email" placeholder="E-mail" required class="validate">
+        </div>
+        <div>
+          <textarea id="message" name="message" placeholder="Ici votre message..." class="validate" ></textarea>
+        </div>
+        <div>
+          <button class="form-button" type="submit">Envoyer</button>
+        </div>
+      </form>
+      <div id="error_message" style="width:100%; height:100%; display:none; ">
+        <h4>Une erreur s'est produite, veuillez rééssayer</h4>
+      </div>
+      <div id="success_message" style="width:100%; height:100%; display:none; ">
+        <h4>Message envoyé !</h4>
+      </div>
+    </div> %>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="./assets/form/form.js"></script>
+
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script src="./script.js" type="text/javascript"></script>
+    <script src="./assets/js/typed.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
