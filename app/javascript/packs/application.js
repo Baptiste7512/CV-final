@@ -9,7 +9,6 @@ import "channels"
 
 
 
-
 require("trix")
 require("@rails/actiontext")
 require("jquery")
