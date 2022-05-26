@@ -19,8 +19,7 @@ ActiveStorage.start()
 console.log('Hello from application.js')
 
 import "controllers"
-import '../src/jquery.min'
-import "controllers"
+
 
 window.jQuery = $;
 window.$ = $;
